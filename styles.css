@@ -4,6 +4,10 @@ body {
     padding: 20px;
   }
   
+  #temperature-data, #windspeed-data {
+  color: #00cc3d;
+  }
+
   #weather-container {
     background-color: #fff;
     border-radius: 10px;
@@ -29,3 +33,17 @@ body {
     text-decoration: underline;
   }
   
+  .parent {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .children-1 {
+    width: 50%;
+  }
+  
+  .children-2 {
+    width: 50%;
+    /* overflow-y: hidden; */
+  }
