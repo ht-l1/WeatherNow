@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Wind Speed</title>
+</head>
+<body>
+  <div id="windspeed-container">
+    <h1>Wind Speed</h1>
+    <div id="windspeed-data"></div>
+    <a href="index.html">Back to Home</a>
+    <a href="temperature.html">View Temperature</a>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetchWeatherData('windspeed_10m', 'windspeed-data');
+    });
+  </script>
+</body>
+</html>
