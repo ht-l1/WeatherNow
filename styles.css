@@ -1,15 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-color: #222222;
     padding: 20px;
+    color: #DEE4E7;
   }
-  
+
   #temperature-data, #windspeed-data {
-  color: #00cc3d;
+  color: lightcoral;
+  font-weight: bold;
+  }
+
+  #message {
+    font-style: oblique;
   }
 
   #weather-container {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #37474F;
     border-radius: 10px;
     padding: 20px;
     max-width: 400px;
@@ -47,3 +55,29 @@ body {
     width: 50%;
     /* overflow-y: hidden; */
   }
+
+  /* For the hyperlinks */
+
+  a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
