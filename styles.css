@@ -1,64 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
-    /* background-color: #f0f0f0; */
-    background-color: #222222;
-    padding: 20px;
-    color: #DEE4E7;
-  }
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0; */
+  background-color: #222222;
+  padding: 20px;
+  color: #DEE4E7;
+  /* toggle theme */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
-  #temperature-data, #windspeed-data {
+/* toggle theme */
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+#fun-fact {
+  color: grey;
+}
+
+hr {
+  border: none;
+  background-color: #333;
+  height: 2px;
+  width: 50%;
+  margin: 20px auto;
+}
+
+
+#temperature-data,
+#windspeed-data {
   color: lightcoral;
   font-weight: bold;
-  }
+}
 
-  #message {
-    font-style: oblique;
-  }
+#message {
+  font-style: oblique;
+}
 
-  #weather-container {
-    /* background-color: #fff; */
-    background-color: #37474F;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  a {
-    display: block;
-    margin: 10px 0;
-    text-align: center;
-    text-decoration: none;
-    color: #0066cc;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .parent {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
-  
-  .children-1 {
-    width: 50%;
-  }
-  
-  .children-2 {
-    width: 50%;
-    /* overflow-y: hidden; */
-  }
+#weather-container {
+  /* background-color: #fff; */
+  background-color: #37474F;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  /* For the hyperlinks */
+h1 {
+  margin-bottom: 20px;
+}
 
-  a:link {
+a {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.children-1 {
+  width: 50%;
+  text-align: center;
+}
+
+
+.main-page-icon {
+  font-size: 400%;
+}
+
+.children-2 {
+  width: 50%;
+  text-align: center;
+  /* overflow-y: hidden; */
+}
+
+/* For the hyperlinks */
+
+a:link {
   color: green;
   background-color: transparent;
   text-decoration: none;

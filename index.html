@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,36 @@
   <script src="https://kit.fontawesome.com/f2df0e5efa.js" crossorigin="anonymous"></script>
   <title>Weather App</title>
 </head>
+
 <body>
   <div id="weather-container">
     <h1>Weather Now&nbsp;<img src="/public/icon.png" style="width:10%"></h1>
-    <div id="temperature"></div>
-    <div id="windspeed"></div>
+    <!-- <div id="temperature"></div>
+    <div id="windspeed"></div> -->
+
+    <!-- add toggle for themes -->
+    <button id="theme-toggler">
+      <i id="theme-icon" class="fa-regular fa-sun"></i> Toggle Theme
+    </button>
+    <p></p>
+    <p></p>
+    <!-- re-deisgn the look -->
     <div class="parent">
       <div class="children-1">
-        <a href="temperature.html"><i class="fa-solid fa-temperature-low"></i>&nbsp;View Temperature</a>
+        <br>
+        <div class="main-page-icon">
+          <i class="fa-solid fa-temperature-low"></i>
+        </div>
+        <br>
+        <a href="temperature.html">View Temperature</a>
       </div>
       <div class="children-2">
-        <a href="windspeed.html"><i class="fa-solid fa-wind"></i>&nbsp;View Wind Speed</a>
+        <br>
+        <div class="main-page-icon">
+          <i class="fa-solid fa-wind"></i>
+        </div>
+        <br>
+        <a href="windspeed.html">View Wind Speed</a>
       </div>
     </div>
     <!-- <img src="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-123rf-4377858_m0jrov.jpg" style="width:100%; height:100%;"> -->
@@ -27,7 +47,7 @@
 
   <!-- test out what info to show here and then hide -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       fetchWeatherData('temperature_2m', 'temperature');
       fetchWeatherData('windspeed_10m', 'windspeed');
     });
@@ -35,4 +55,5 @@
   <!-- end of hide -->
 
 </body>
+
 </html>

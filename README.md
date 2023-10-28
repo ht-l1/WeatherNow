@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Weather
+# Weather Now
 
 A weather app that shows the current temperature and condition based on user location using the Open-Meteo API. It is built using JavaScript, HTML, and CSS.
 It offers a few key features:
@@ -15,9 +15,11 @@ It offers a few key features:
 
 ## Project Timeline
 
-Milestone 1: Framework Setup and Basic Data Fetching (Completed by October 4th)
+Milestone 2: Implementations and Design (Completed by October 28th)
+- Redesigned the home page
+- Added the light dark theme toggle 
+- Added fun facts section
+ 
+Milestone 1: Framework Setup and API Fetching (Completed by October 4th)
 - Set up the basic framework for the weather app
 - Implemented functionality to fetch temperature and wind speed data from the API
-
-Milestone 2: Additional Data Integration (To be completed by October 9th)
-- Extend the app's functionality to fetch and display additional data from the API
