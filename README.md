@@ -2,6 +2,9 @@
 
 # Weather Now
 
+I've deployed my site here: 
+🚀[https://ht-l1.github.io/weather/](https://ht-l1.github.io/weather/)
+
 A weather app that shows the current temperature and condition based on user location using the Open-Meteo API. It is built using JavaScript, HTML, and CSS.
 It offers a few key features:
 - a client-side JavaScript snippet that allows a user to see the weather condition based on their own geography
