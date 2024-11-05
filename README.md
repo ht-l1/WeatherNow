@@ -3,7 +3,7 @@
 # Deployment
 
 I've deployed my site here:
-🚀[https://ht-l1.github.io/weather/](https://ht-l1.github.io/weather/)
+🚀[https://ht-l1.github.io/weather/](https://ht-l1.github.io/WeatherNow/)
 
 Please ensure you allow the browser to know your location as the weather info is user location specific:
 <img src="https://github.com/ht-l1/weather/assets/106502799/ef174ee1-2c50-4b8d-bd4a-44bac7974637" width="30%" height="30%">
