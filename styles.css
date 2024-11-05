@@ -1,12 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  /* background-color: #f0f0f0; */
   background-color: #222222;
   padding: 20px;
-  color: #DEE4E7;
-  /* toggle theme */
+  /* color: #DEE4E7; */
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+/* .lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
 
 /* toggle theme */
 .light-theme {
@@ -47,8 +52,17 @@ hr {
   border-radius: 10px;
   padding: 20px;
   max-width: 400px;
+  /* outline: dashed 1px lightgrey; */
   margin: auto;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+#theme-toggler {
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -98,7 +112,7 @@ a:link {
 }
 
 a:visited {
-  color: pink;
+  /* color: pink; */
   background-color: transparent;
   text-decoration: none;
 }
@@ -120,7 +134,7 @@ a:active {
 #chart-container {
   width: 80%;
   margin: 20px auto;
-  background-color: #9490cb;
+  /* background-color: #9490cb; */
 }
 
 #time-toggle {
@@ -139,7 +153,7 @@ a:active {
 
 
 /* animated */
-body {
+/* body {
   margin: 0;
   padding: 0;
 }
@@ -232,4 +246,55 @@ body {
     border-radius: 50%;
     opacity: 0;
   }
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body  {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+  pointer-events: none;
+}
+.center h1{
+  text-align:center;
+  color:white;
+  font-family: 'Source Code Pro', monospace;
+  text-transform:uppercase;
 }

@@ -76,13 +76,13 @@ async function updateChart(days) {
         {
           label: 'Max Temperature',
           data: maxTemps,
-          borderColor: 'red',
+          borderColor: '#FF6B6B',
           fill: false
         },
         {
           label: 'Min Temperature',
           data: minTemps,
-          borderColor: 'blue',
+          borderColor: '#4ECDC4',
           fill: false
         }
       ]
@@ -92,7 +92,12 @@ async function updateChart(days) {
       title: {
         display: true,
         text: 'Temperature Trend'
-      }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            usePointStyle: true,  // enable the use of point style in the legend
+            pointStyle: 'dash' }}}
     }
   });
 }

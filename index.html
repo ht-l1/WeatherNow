@@ -5,20 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonbon&display=swap" rel="stylesheet">
+
   <script src="https://kit.fontawesome.com/f2df0e5efa.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <title>Weather App</title>
+  <title>Weather Now</title>
+
 </head>
 
 <body>
   <div class="wrapper">
   <div id="weather-container">
-    <h1>Weather Now&nbsp;</h1>
+    <h1 style="
+  font-family: 'Bonbon', cursive;
+  font-size: 3rem;
+  color: #0077be;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, rgb(152, 101, 152), rgb(210, 164, 210));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+">Weather Now&nbsp;</h1>
 
+<div id="theme-toggler">
     <!-- add toggle for themes -->
-    <button id="theme-toggler">
+    <button>
       <i id="theme-icon" class="fa-regular fa-sun"></i> Toggle Theme
-    </button>
+    </button></div>
     <p></p>
     <p></p>
 
@@ -57,7 +77,7 @@
 
 
 <!-- animated -->
-  <div class="box">
+  <!-- <div class="box">
     <div></div>
     <div></div>
     <div></div>
@@ -68,7 +88,15 @@
     <div></div>
     <div></div>
     <div></div>
-  </div>
+  </div> -->
+
+  <!-- second animated -->
+  <div class="center">
+    <h1>
+      
+      </h1>
+   </div>
+
 </div>
 </body>
 
