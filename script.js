@@ -38,3 +38,73 @@ document.getElementById('theme-toggler').addEventListener('click', function () {
     themeIcon.classList.add('fa-regular', 'fa-sun');
   }
 });
+
+// chart
+
+let chart;
+
+async function fetchHistoricalData(days) {
+  const position = await new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  
+  const today = new Date();
+  const pastDate = new Date(today.getTime() - days * 24 * 60 * 60 * 1000);
+  
+  const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&start_date=${pastDate.toISOString().split('T')[0]}&end_date=${today.toISOString().split('T')[0]}&daily=temperature_2m_max,temperature_2m_min&timezone=auto`);
+  
+  return await response.json();
+}
+
+async function updateChart(days) {
+  const data = await fetchHistoricalData(days);
+  const dates = data.daily.time;
+  const maxTemps = data.daily.temperature_2m_max;
+  const minTemps = data.daily.temperature_2m_min;
+
+  if (chart) {
+    chart.destroy();
+  }
+
+  chart = new Chart(document.getElementById('temperatureChart'), {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [
+        {
+          label: 'Max Temperature',
+          data: maxTemps,
+          borderColor: 'red',
+          fill: false
+        },
+        {
+          label: 'Min Temperature',
+          data: minTemps,
+          borderColor: 'blue',
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      title: {
+        display: true,
+        text: 'Temperature Trend'
+      }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.time-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const days = parseInt(button.dataset.days);
+      updateChart(days);
+    });
+  });
+
+  // Initial chart load
+  updateChart(7);
+});
